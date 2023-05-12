@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+
+name: AlterarColunaBoardPM
+
+# Controls when the workflow will run
+on:
+  issues:
+    type: [edited]
+    column: [Open]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  move-assigned-card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: alex-page/github-project-automation-plus@7ffb872c64bd809d23563a130a0a97d01dfa8f43
+        with:
+          project: Geral
+          column: Pronta para Desenvolvimento
