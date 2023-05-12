@@ -4,11 +4,9 @@ name: AlterarColunaBoardPM
 on:
   issues:
     type: [edited]
-    column: [Open]
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel ---repo-token:
 jobs:
   automate-project-columns:
+    if: column == "Open"
     runs-on: ubuntu-latest
     steps:
       - uses: alex-page/github-project-automation-plus@v0.8.3
