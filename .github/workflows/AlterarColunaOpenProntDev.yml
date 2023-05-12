@@ -22,4 +22,4 @@ jobs:
           with:
             project: Geral
             column: Pronta para Desenvolvimento
-            GITHUB_TOKEN: ${{ secrets.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 }}
+            repo-token: ${{ secrets.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 }}
