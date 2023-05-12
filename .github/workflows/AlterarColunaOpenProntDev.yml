@@ -20,3 +20,4 @@ jobs:
         with:
           project: Geral
           column: Pronta para Desenvolvimento
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
